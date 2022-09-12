@@ -1,0 +1,125 @@
+ScreenManager:
+    instaDpDownloader:
+
+<instaDpDownloader>:
+    name:"InstaDPdownloader"
+    MDBottomNavigation:
+        selected_color_background: "#97ecf8"
+        text_color_active: 0, 0, 0, 1
+        spacing:"5dp"
+        padding:"5dp"
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            text: 'Profile Pic'
+            icon: 'instagram'
+            MDBoxLayout:
+                orientation: 'vertical'
+                spacing:"5dp"
+                padding:"5dp"
+                
+                MDTopAppBar:
+                    title: "Instagram Profile Downloader"
+                    right_action_items: [["moon-first-quarter",lambda y:app.theme_change()]]  
+                    elevation: 10
+                Image:
+                    source:".\\assets\\images\\insta.png"
+                    halign:"center"
+                MDLabel:
+                    text: "Instagram Profile Pic Downloader"
+                    font_style:"H4"
+                    halign:"center"
+                MDLabel:
+                    text: "It downloads profile pic only"
+                    theme_text_color:"Hint"
+                    halign:"center"
+                MDTextField:
+                    id:Username
+                    hint_text: "Enter Profile Username"
+                    multiline:False
+                    size_hint:(None,None)
+                    pos_hint:{"center_x":0.5}
+                    width:320
+                    # height:70
+                MDRaisedButton:
+                    text:"Download"
+                    spacing:30
+                    size_hint:(None,None)
+                    pos_hint:{"center_x":0.5}
+                    width:120
+                    height:70
+                    on_press:
+                        root.Profile_downloader(Username.text)
+                        Username.text = ""
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: 'Full Profile'
+            icon: 'instagram'
+            on_tab_press: app.root.current="DevProfile"
+            MDLabel:
+                text: 'Updated Soon!\n\nFull Profile Downloader'
+                font_style:"H4"
+                bold:True
+                halign: 'center'
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: 'Profile Info'
+            icon: 'instagram'
+            MDLabel:
+                text: 'Updated Soon!\n\nProfile Info'
+                font_style:"H4"
+                bold:True
+                halign: 'center'
+        MDBottomNavigationItem:
+            name: 'screen 6'
+            text: 'DevProfile'
+            icon: 'face-man-profile'            
+            MDCard:
+                radius: 36
+                md_bg_color: app.theme_cls.primary_color
+                pos_hint: {"center_x": .5, "center_y": .5}
+                size_hint: .9, .9
+                MDBoxLayout:
+                    orientation:"vertical"
+                    spacing:"5dp"
+                    padding:"5dp"
+                    FitImage:
+                        source:".\\assets\\images\\Profile.png"
+                        halign:"center"
+                        size_hint: None, None
+                        width:"170dp"
+                        height:"200dp"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                    MDLabel:
+                        text: "[b]Asher Fraz[i] - Developer[/b][/i]"
+                        font_style:"H4"
+                        markup:True
+                        halign:"center"
+                        theme_text_color:"ContrastParentBackground"
+                    MDLabel:
+                        text:"[b][i]Insta Profile Downloader[/b][/i] - it downloads instagram content like profile picture, full profile data.\n This application is build in [b]Python[/b] with [b]Kivy Framework[/b]. This framework should be the perfect starting point to get you on the right track for [b]cross-platform application[/b] development."
+                        markup:True
+                        font_style:"Body1"
+                        halign:"center"
+                        theme_text_color:"ContrastParentBackground"
+                    MDList:
+                        OneLineAvatarIconListItem:
+                            text:"Open Project Page"
+                            on_release:
+                                root.sociallinks("3")
+                                print("Open project!")
+                            IconLeftWidget:
+                                icon: ".\\assets\\images\\insta.png"
+                        OneLineAvatarIconListItem:
+                            text:"Follow me on GitHub"
+                            on_release:
+                                root.sociallinks("1")
+                                print("GitHub Click!")
+                            IconLeftWidget:
+                                icon: "github"
+                        OneLineAvatarIconListItem:
+                            text:"Follow me on Instagram"
+                            on_release: 
+                                root.sociallinks("2")
+                                print("Instagram Click 2!")
+                            IconLeftWidget:
+                                icon: "instagram"
