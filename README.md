@@ -1,5 +1,5 @@
 
-![Logo](https://raw.githubusercontent.com/asherfraz/InstaProfileDownloader/main/assets/images/insta.png  =250x250)
+![Logo](https://raw.githubusercontent.com/asherfraz/InstaProfileDownloader/main/assets/images/insta.png=250x250)
 
 
 # InstaProfileDownloader
