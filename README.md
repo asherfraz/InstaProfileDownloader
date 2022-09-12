@@ -12,7 +12,7 @@ Insta Profile Downloader - it downloads instagram content like profile picture, 
 ## Features
 
 - Light/dark mode toggle
-- Fullscreen mode
+- Windowed mode
 - Cross platform
 
 
