@@ -26,7 +26,7 @@ Insta Profile Downloader - it downloads instagram content like profile picture, 
 
 ## Tech Stack
 
-Python , Kivy , KivyMD 
+Python3 , kivy==2.1.0 , KivyMD , Instaloader , Kaki , watchdog , Webbrowser 
 
 ## Authors
 
