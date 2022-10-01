@@ -16,7 +16,6 @@ ScreenManager:
                 orientation: 'vertical'
                 spacing:"5dp"
                 padding:"5dp"
-                
                 MDTopAppBar:
                     title: "Instagram Profile Downloader"
                     right_action_items: [["moon-first-quarter",lambda y:app.theme_change()]]  
@@ -29,7 +28,7 @@ ScreenManager:
                     font_style:"H4"
                     halign:"center"
                 MDLabel:
-                    text: "It downloads profile pic only"
+                    text: "Warning : It downloads profile pic only"
                     theme_text_color:"Hint"
                     halign:"center"
                 MDTextField:
@@ -39,7 +38,6 @@ ScreenManager:
                     size_hint:(None,None)
                     pos_hint:{"center_x":0.5}
                     width:320
-                    # height:70
                 MDRaisedButton:
                     text:"Download"
                     spacing:30
@@ -48,27 +46,95 @@ ScreenManager:
                     width:120
                     height:70
                     on_press:
-                        root.Profile_downloader(Username.text)
+                        root.Profile_downloader(Username.text,True)
                         Username.text = ""
         MDBottomNavigationItem:
             name: 'screen 2'
             text: 'Full Profile'
             icon: 'instagram'
-            on_tab_press: app.root.current="DevProfile"
-            MDLabel:
-                text: 'Updated Soon!\n\nFull Profile Downloader'
-                font_style:"H4"
-                bold:True
-                halign: 'center'
+            MDBoxLayout:
+                orientation: 'vertical'
+                spacing:"5dp"
+                padding:"5dp"
+                
+                MDTopAppBar:
+                    title: "Instagram Profile Downloader"
+                    right_action_items: [["moon-first-quarter",lambda y:app.theme_change()]]  
+                    elevation: 10
+                Image:
+                    source:".\\assets\\images\\insta.png"
+                    halign:"center"
+                MDLabel:
+                    text: "Instagram Full Profile Downloader"
+                    font_style:"H4"
+                    halign:"center"
+                MDLabel:
+                    text: "Warning : It downloads Full profile\ninclude [b]photos, reels, igtv, bio[/b]"
+                    markup:True
+                    theme_text_color:"Hint"
+                    halign:"center"
+                MDTextField:
+                    id:Username1
+                    hint_text: "Enter Profile Username"
+                    multiline:False
+                    size_hint:(None,None)
+                    pos_hint:{"center_x":0.5}
+                    width:320
+                MDRaisedButton:
+                    text:"Download"
+                    spacing:30
+                    size_hint:(None,None)
+                    pos_hint:{"center_x":0.5}
+                    width:120
+                    height:70
+                    on_press:
+                        root.Profile_downloader(Username1.text,False)
+                        Username1.text = ""
         MDBottomNavigationItem:
             name: 'screen 3'
             text: 'Profile Info'
             icon: 'instagram'
-            MDLabel:
-                text: 'Updated Soon!\n\nProfile Info'
-                font_style:"H4"
-                bold:True
-                halign: 'center'
+            MDBoxLayout:
+                orientation: 'vertical'
+                spacing:"5dp"
+                padding:"5dp"
+                
+                MDTopAppBar:
+                    title: "Instagram Profile Downloader"
+                    right_action_items: [["moon-first-quarter",lambda y:app.theme_change()]]  
+                    elevation: 10
+                MDGridLayout:
+                    rows:2
+                    cols:2
+                    padding:"60dp"
+                    FitImage:
+                        source:".\\assets\\images\\Profile.png"
+                        halign:"center"
+                        size_hint: None, None
+                        width:"170dp"
+                        height:"200dp"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        spacing:"5dp"
+                        padding:"5dp"
+                        MDLabel:
+                            text:"Username : _____________"
+                            halign:"center"
+                            bold:True
+                        MDLabel:
+                            text:"Full Name : _____________"
+                            halign:"center"
+                            bold:True
+                        MDLabel:
+                            text:"Biogrphy : _____________"
+                            halign:"center"
+                            bold:True
+                MDLabel:
+                    text: 'Updated Soon!\n\nProfile Info'
+                    font_style:"H4"
+                    bold:True
+                    halign: 'center'
         MDBottomNavigationItem:
             name: 'screen 6'
             text: 'DevProfile'

@@ -28,7 +28,7 @@ class instaDpDownloader(Screen):
         else:
             pass
 
-    def Profile_downloader(self, usrname):
+    def Profile_downloader(self, usrname, scr):
         import instaloader
 
         loader = instaloader.Instaloader()
@@ -36,7 +36,7 @@ class instaDpDownloader(Screen):
         usrname = usrname.lower()
         if usrname != "":
             try:
-                loader.download_profile(usrname, profile_pic_only=True)
+                loader.download_profile(usrname, profile_pic_only=scr)
                 Snackbar(
                     text="[b]Profile Downloaded Successfully![/b]",
                     bg_color=(0, 1, 0, 0.5),
