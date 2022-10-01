@@ -22,7 +22,7 @@ Insta Profile Downloader - it downloads instagram content like profile picture, 
 ## Usage/Examples
 
 - In Windows execute run.bat file to run app
-- In Linux execute >> DEBUG=1 python main.py
+- In Linux & MAC OS execute >> DEBUG=1 python main.py
 
 ## Tech Stack
 
