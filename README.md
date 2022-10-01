@@ -9,6 +9,9 @@ Insta Profile Downloader - it downloads instagram content like profile picture, 
 ## Screenshots
 
 ![Profile Pic Screenshot](https://raw.githubusercontent.com/asherfraz/InstaProfileDownloader/main/Downloads/product%20Screeshots/Profile%20Pic%20Screen.png)
+
+![Full Profile Downloader Screenshot](https://raw.githubusercontent.com/asherfraz/InstaProfileDownloader/main/Downloads/product%20Screeshots/Full%20Profile%20Downloader%20Screen.png)
+
 ## Features
 
 - Light/dark mode toggle
